@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aplicación de Letras para Niños</title>
+    <!-- CSS inlined para eliminar dependencias de red -->
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #e0f2f7; /* Un fondo suave para los niños */
+        }
+        .bg-gray-100{background-color:rgb(243 244 246)}.flex{display:flex}.items-center{align-items:center}.justify-center{justify-content:center}.min-h-screen{min-height:100vh}.bg-white{background-color:#fff}.p-6{padding:1.5rem}.p-10{padding:2.5rem}.rounded-3xl{border-radius:1.5rem}.shadow-2xl{box-shadow:0 25px 50px -12px rgba(0,0,0,.25)}.w-full{width:100%}.max-w-2xl{max-width:42rem}.mx-4{margin-left:1rem;margin-right:1rem}.text-center{text-align:center}.transition-all{transition-property:all}.duration-500{transition-duration:.5s}.ease-in-out{transition-timing-function:cubic-bezier(.4,0,.2,1)}.space-y-6>:not([hidden])~:not([hidden]){--tw-space-y-reverse:0;margin-top:calc(1.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(1.5rem * var(--tw-space-y-reverse))}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-5xl{font-size:3rem;line-height:1}.font-bold{font-weight:700}.text-blue-600{color:rgb(37 99 235)}.mb-4{margin-bottom:1rem}.bg-blue-100{background-color:rgb(219 234 254)}.p-8{padding:2rem}.rounded-2xl{border-radius:1rem}.shadow-inner{box-shadow:inset 0 2px 4px 0 rgba(0,0,0,.06)}.w-full{width:100%}.flex-col{flex-direction:column}.text-6xl{font-size:3.75rem;line-height:1}.text-8xl{font-size:6rem;line-height:1}.font-black{font-weight:900}.text-blue-800{color:rgb(30 58 138)}.mb-6{margin-bottom:1.5rem}.text-2xl{font-size:1.5rem;line-height:2rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.font-semibold{font-weight:600}.text-blue-700{color:rgb(29 78 216)}.text-7xl{font-size:5rem;line-height:1}.space-x-4>:not([hidden])~:not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.mt-6{margin-top:1.5rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-3{padding-top:.75rem;padding-bottom:.75rem}.bg-blue-500{background-color:rgb(59 130 246)}.text-white{color:#fff}.rounded-full{border-radius:9999px}.shadow-lg{box-shadow:0 10px 15px -3px rgba(0,0,0,.1),0 4px 6px -2px rgba(0,0,0,.05)}.hover:bg-blue-600:hover{background-color:rgb(37 99 235)}.transition-transform{transition-property:transform}.transform{transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hover:scale-105:hover{--tw-scale-x:1.05;--tw-scale-y:1.05;transform:translate(var(--tw-translate-x),var(--tw-translate-y)) rotate(var(--tw-rotate)) skewX(var(--tw-skew-x)) skewY(var(--tw-skew-y)) scaleX(var(--tw-scale-x)) scaleY(var(--tw-scale-y))}.hidden{display:none}.text-pink-600{color:rgb(219 39 119)}.bg-pink-100{background-color:rgb(253 230 246)}.text-lg{font-size:1.125rem;line-height:1.75rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.font-medium{font-weight:500}.text-pink-800{color:rgb(157 23 77)}.grid{display:grid}.grid-cols-2{grid-template-columns:repeat(2,minmax(0,1fr))}.gap-4{gap:1rem}.mt-8{margin-top:2rem}.bg-pink-500{background-color:rgb(236 72 153)}.hover:bg-pink-600:hover{background-color:rgb(219 39 119)}.text-yellow-500{color:rgb(234 179 8)}.hover:bg-yellow-600:hover{background-color:rgb(202 138 4)}.text-red-500{color:rgb(239 68 68)}.text-green-500{color:rgb(34 197 94)}.bg-gray-200{background-color:rgb(229 231 235)}.text-gray-800{color:rgb(31 41 55)}.rounded-xl{border-radius:.75rem}.hover:bg-gray-300:hover{background-color:rgb(209 213 219)}@media (min-width:640px){.sm\:grid-cols-3{grid-template-columns:repeat(3,minmax(0,1fr))}}.md\:text-5xl{font-size:3rem;line-height:1}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-8xl{font-size:6rem;line-height:1}.md\:text-xl{font-size:1.25rem;line-height:1.75rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-6xl{font-size:3.75rem;line-height:1}.md\:p-10{padding:2.5rem}
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
+
+    <!-- Contenedor principal de la aplicación -->
+    <div class="bg-white p-6 md:p-10 rounded-3xl shadow-2xl w-full max-w-2xl mx-4">
+
+        <!-- Área de contenido principal -->
+        <div id="content-area" class="text-center transition-all duration-500 ease-in-out">
+
+            <!-- Módulo de Aprendizaje (visible por defecto) -->
+            <div id="learning-mode" class="flex flex-col items-center space-y-6">
+                <h1 class="text-3xl md:text-5xl font-bold text-blue-600 mb-4">Aprende el Alfabeto</h1>
+                <div class="bg-blue-100 p-8 rounded-2xl shadow-inner w-full flex flex-col items-center">
+                    <div id="letter-display" class="text-6xl md:text-8xl font-black text-blue-800 mb-4"></div>
+                    <div id="word-display-learning" class="text-2xl md:text-4xl font-semibold text-blue-700 mb-6"></div>
+                    <!-- Contenedor para la imagen emoji -->
+                    <div id="emoji-display" class="text-7xl"></div>
+                </div>
+                <!-- Botones de navegación para el modo de aprendizaje -->
+                <div class="flex space-x-4 mt-6">
+                    <button id="prev-button" class="px-6 py-3 bg-blue-500 text-white font-bold rounded-full shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-105">Anterior</button>
+                    <button id="next-button" class="px-6 py-3 bg-blue-500 text-white font-bold rounded-full shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-105">Siguiente</button>
+                </div>
+            </div>
+
+            <!-- Módulo de Juego (oculto por defecto) -->
+            <div id="game-mode" class="hidden flex-col items-center space-y-6">
+                <h1 class="text-3xl md:text-5xl font-bold text-pink-600 mb-4">Juego de Asociación</h1>
+                <div class="bg-pink-100 p-8 rounded-2xl shadow-inner w-full flex flex-col items-center">
+                    <p class="text-lg md:text-xl font-medium text-pink-800 mb-4">Selecciona la letra correcta para:</p>
+                    <div id="target-word-display" class="text-4xl md:text-6xl font-black text-pink-800"></div>
+                </div>
+                <!-- Cuadrícula de opciones para el juego -->
+                <div id="game-options" class="grid grid-cols-2 sm:grid-cols-3 gap-4 w-full">
+                    <!-- Los botones se generarán aquí con JavaScript -->
+                </div>
+                <!-- Mensaje de retroalimentación para el jugador -->
+                <div id="feedback-message" class="text-xl md:text-2xl font-bold text-center mt-4 h-8"></div>
+                <div class="mt-4">
+                    <button id="next-round-button" class="hidden px-6 py-3 bg-yellow-500 text-white font-bold rounded-full shadow-lg hover:bg-yellow-600 transition-transform transform hover:scale-105">Siguiente Ronda</button>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Botones para cambiar entre modos -->
+        <div class="flex justify-center space-x-4 mt-8">
+            <button id="show-learning" class="px-6 py-3 bg-blue-500 text-white font-bold rounded-full shadow-lg hover:bg-blue-600 transition-transform transform hover:scale-105">Aprender</button>
+            <button id="show-game" class="px-6 py-3 bg-pink-500 text-white font-bold rounded-full shadow-lg hover:bg-pink-600 transition-transform transform hover:scale-105">Jugar</button>
+        </div>
+
+    </div>
+
+    <!-- Script de la aplicación -->
+    <script>
+        // Referencias a los elementos del DOM
+        const learningMode = document.getElementById('learning-mode');
+        const gameMode = document.getElementById('game-mode');
+        const showLearningButton = document.getElementById('show-learning');
+        const showGameButton = document.getElementById('show-game');
+
+        // Elementos del modo de aprendizaje
+        const letterDisplay = document.getElementById('letter-display');
+        const wordDisplayLearning = document.getElementById('word-display-learning');
+        const emojiDisplay = document.getElementById('emoji-display');
+        const prevButton = document.getElementById('prev-button');
+        const nextButton = document.getElementById('next-button');
+
+        // Elementos del modo de juego
+        const targetWordDisplay = document.getElementById('target-word-display');
+        const gameOptions = document.getElementById('game-options');
+        const feedbackMessage = document.getElementById('feedback-message');
+        const nextRoundButton = document.getElementById('next-round-button');
+
+        // Datos para el modo de aprendizaje y juego
+        const alphabetData = [
+            { letter: "A", word: "Avión", emoji: "✈️" },
+            { letter: "B", word: "Barco", emoji: "⛵" },
+            { letter: "C", word: "Casa", emoji: "🏠" },
+            { letter: "D", word: "Delfín", emoji: "🐬" },
+            { letter: "E", word: "Elefante", emoji: "🐘" },
+            { letter: "F", word: "Flor", emoji: "🌸" },
+            { letter: "G", word: "Gato", emoji: "🐱" },
+            { letter: "H", word: "Helado", emoji: "🍦" },
+            { letter: "I", word: "Iglú", emoji: "🛖" },
+            { letter: "J", word: "Jirafa", emoji: "🦒" }
+        ];
+
+        let currentLetterIndex = 0;
+        let targetLetter;
+
+        // Función para cambiar de modo de vista
+        function switchMode(mode) {
+            if (mode === 'learning') {
+                learningMode.classList.remove('hidden');
+                learningMode.classList.add('flex');
+                gameMode.classList.add('hidden');
+                gameMode.classList.remove('flex');
+                updateLearningModule();
+            } else if (mode === 'game') {
+                gameMode.classList.remove('hidden');
+                gameMode.classList.add('flex');
+                learningMode.classList.add('hidden');
+                learningMode.classList.remove('flex');
+                generateGame();
+            }
+        }
+
+        // --- Lógica del Modo de Aprendizaje ---
+        function updateLearningModule() {
+            const data = alphabetData[currentLetterIndex];
+            letterDisplay.textContent = data.letter;
+            wordDisplayLearning.textContent = data.word;
+            emojiDisplay.textContent = data.emoji;
+        }
+
+        prevButton.addEventListener('click', () => {
+            currentLetterIndex = (currentLetterIndex - 1 + alphabetData.length) % alphabetData.length;
+            updateLearningModule();
+        });
+
+        nextButton.addEventListener('click', () => {
+            currentLetterIndex = (currentLetterIndex + 1) % alphabetData.length;
+            updateLearningModule();
+        });
+
+        // --- Lógica del Modo de Juego ---
+
+        // Función para generar la ronda de juego
+        function generateGame() {
+            // Limpiar la cuadrícula de botones
+            gameOptions.innerHTML = '';
+            feedbackMessage.textContent = '';
+            nextRoundButton.classList.add('hidden');
+
+            // Seleccionar un par de letra/palabra aleatorio
+            const targetData = alphabetData[Math.floor(Math.random() * alphabetData.length)];
+            targetLetter = targetData.letter;
+            targetWordDisplay.textContent = targetData.word;
+
+            // Crear un array de opciones. Siempre incluirá la letra correcta
+            let options = new Set();
+            options.add(targetLetter);
+
+            // Agregar 5 letras incorrectas aleatorias
+            while (options.size < 6) {
+                const randomLetter = String.fromCharCode(65 + Math.floor(Math.random() * 26));
+                options.add(randomLetter);
+            }
+
+            // Convertir el Set a Array y barajarlo
+            let shuffledOptions = Array.from(options).sort(() => Math.random() - 0.5);
+
+            // Crear y agregar botones a la interfaz
+            shuffledOptions.forEach(letter => {
+                const button = document.createElement('button');
+                button.textContent = letter;
+                button.className = "px-6 py-4 bg-gray-200 text-gray-800 font-bold rounded-xl shadow-md hover:bg-gray-300 transition-transform transform hover:scale-105 text-3xl";
+                button.addEventListener('click', () => checkAnswer(letter));
+                gameOptions.appendChild(button);
+            });
+        }
+
+        // Función para manejar la respuesta del jugador
+        function checkAnswer(selectedLetter) {
+            const buttons = gameOptions.querySelectorAll('button');
+            buttons.forEach(button => button.disabled = true); // Desactivar botones después de la selección
+
+            if (selectedLetter === targetLetter) {
+                feedbackMessage.textContent = "¡Correcto! 🎉";
+                feedbackMessage.classList.remove('text-red-500');
+                feedbackMessage.classList.add('text-green-500');
+                nextRoundButton.classList.remove('hidden');
+            } else {
+                feedbackMessage.textContent = "¡Incorrecto! 😞";
+                feedbackMessage.classList.remove('text-green-500');
+                feedbackMessage.classList.add('text-red-500');
+                buttons.forEach(button => button.disabled = false); // Volver a habilitar los botones en caso de error
+            }
+        }
+        
+        // Manejadores de eventos para los botones de modo
+        showLearningButton.addEventListener('click', () => switchMode('learning'));
+        showGameButton.addEventListener('click', () => switchMode('game'));
+        nextRoundButton.addEventListener('click', generateGame);
+
+        // Iniciar la aplicación en el modo de aprendizaje
+        window.onload = function() {
+            switchMode('learning');
+        };
+
+    </script>
+</body>
+</html>
